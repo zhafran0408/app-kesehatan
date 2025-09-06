@@ -1,22 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aplikasi Kesehatan</title>
-    <link rel="stylesheet" href="file.css" />
-  </head>
-  <body>
-    <div class="container">
-      <h1>Data Santri Sakit 🤒</h1>
-      <div class="input">
-        <input type="text" id="sakit" placeholder="Santri yang sakit ..." />
-        <input type="text" id="rawat" placeholder="kamar Santri ..." />
-        <button id="masukkan-btn">Input</button>
-      </div>
-      <ul id="catatan"></ul>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Data Santri Sakit</title>
+  <link rel="stylesheet" href="file.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Data Santri Sakit</h1>
+    <div class="input">
+      <input type="text" id="nama" placeholder="Santri yang sakit ...">
+      <input type="text" id="rawat" placeholder="Rawat inap ...">
+      <button onclick="tambahCatatan()">input</button>
     </div>
+    <ul id="catatan"></ul>
+  </div>
 
-    <script src="file.js"></script>
-  </body>
+  <!-- Modal Edit -->
+  <div class="modal" id="editModal">
+    <div class="modal-content">
+      <h2>Edit Data</h2>
+      <input type="text" id="editNama">
+      <input type="text" id="editRawat">
+      <button class="save-btn" onclick="simpanEdit()">Simpan</button>
+      <button class="close-btn" onclick="tutupModal()">Batal</button>
+    </div>
+  </div>
+
+  <script src="file.js"></script>
+</body>
 </html>
+
